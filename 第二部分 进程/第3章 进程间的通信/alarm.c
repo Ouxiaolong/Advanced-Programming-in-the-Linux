@@ -1,0 +1,1 @@
+#include<stdio.h>#include<unistd.h>#include<stdlib.h>int main(int argc,char **argv){	int ret;		//调用alarm()定时器函数	alarm(5);	pause();	printf("I have been waken uo .\n",ret);}
