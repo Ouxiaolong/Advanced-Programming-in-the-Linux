@@ -17,7 +17,12 @@
 /**宏定义***********************************************************************/ 
 #define maxsize 256  
 
-
+/**
+  * @brief     主函数
+  * @param     argc
+               argv
+  * @retval    None
+  */
 int main(int argc, char *argv[])  
 {  
     int fd1,fd2;  
@@ -33,7 +38,7 @@ int main(int argc, char *argv[])
        	perror("open fails");  
 		return -1;  
     }  
-  //如果文件不存在，则创建，若存在，则覆盖；  
+	//如果文件不存在，则创建，若存在，则覆盖；  
     if((fd2 = open(argv[2],O_WRONLY | O_CREAT | O_TRUNC ,0664)) == -1)
     {  
 		perror("open fails");  

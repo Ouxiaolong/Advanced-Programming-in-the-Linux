@@ -14,6 +14,12 @@
 #include <sys/stat.h>  
 #include <sys/types.h>  
 
+/**
+  * @brief     主函数
+  * @param     argc
+               argv
+  * @retval    None
+  */
 int main(int argc, const char *argv[])  
 {  
     int fd;  

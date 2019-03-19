@@ -13,15 +13,22 @@
 #include <time.h>  
 
 /**宏定义***********************************************************************/ 
-#define N 64  
- 
+#define N 128 
+
+/**
+  * @brief     主函数
+  * @param     argc
+               argv
+  * @retval    None
+  */
 int main(int argc, char *argv[])  
 {  
     int n;  
     char buf[N];  
     FILE *fp;  
     time_t t;  
-  
+	char *t_buf = buf;
+	
     if(argc < 2)  
     {  
         printf("Usage : %s <file >\n",argv[0]);  
@@ -37,8 +44,11 @@ int main(int argc, char *argv[])
     while(1)  
     {  
         time(&t);  
-        fprintf(fp,"%s",ctime(&t));  
-        fflush(fp);  
+		t_buf = ctime(&t);
+		printf("%s",t_buf);
+        fprintf(fp,"%s",t_buf);  
+        
+		fflush(fp);  
         sleep(1);  
     }  
   

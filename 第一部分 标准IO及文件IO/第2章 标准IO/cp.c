@@ -12,9 +12,16 @@
 #include <string.h>  
 #include <unistd.h>  
 #include <fcntl.h>  
+
 /**宏定义***********************************************************************/ 
 #define maxsize 5  
 
+/**
+  * @brief     主函数
+  * @param     argc
+               argv
+  * @retval    None
+  */
 int main(int argc, char *argv[])  
 {  
     FILE *fp1 ,*fp2;  
